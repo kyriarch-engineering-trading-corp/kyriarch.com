@@ -69,3 +69,26 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+
+.contact-us {
+  margin-top: 50px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.center-bg {
+  background-position: center;
+  background-size: cover;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.sqwh {
+  width: 2.5em;
+  height: 2.5em;
+}
