@@ -1,30 +1,28 @@
-<!-- Services -->
-  <section class="page-section" id="{{ site.data.sitetext[site.locale].services.section | default: "services" }}">
+<section class="service-area grey-bg pb-70 pt-100">
     <div class="container">
-	
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].services.title | default: "Services" }}</h2>
-          {% if site.data.sitetext[site.locale].services.text %}
-		  <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].services.text }}</h3>
-		  {% endif %}
+        <div class="row">
+            <div class="col-xl-12 text-center mb-40">
+                <div class="section-title service-title">
+                    <h2>Our Services</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,words which don't look even slightly believable.</p>
+                </div>
+            </div>
         </div>
-      </div>
-	  
-      <div class="row text-center">
-	  {% for service in site.data.sitetext[site.locale].services.list %}
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x center-bg circle sqwh" style="background-image: url('/assets/img/services/{{ service.thumb }}')">
-            <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i> -->
-            <!-- <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i> -->
-            <!-- <img class="iconized circle" src="/assets/img/services/{{ service.thumb }}" /> -->
-          </span>
-          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
-          {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+        <div class="row">
+            {% for service in site.services %}
+            <div class="col-lg-4 col-md-6 text-center mb-30">
+                <div class="features-wrap">
+                    {% if service.icon %}
+                    <div class="features-icon">
+                        <img src="{{service.icon}}" alt="{{service.title}}">
+                    </div>
+                    {% endif %}
+                    <h4>{{service.title}}</h4>
+                    <p>{{service.description}}</p>
+                    <a href="{{service.url}}">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-	  {% endfor %}
-      </div>
-	  
     </div>
-  </section>
-<!-- End Services -->
+</section>
