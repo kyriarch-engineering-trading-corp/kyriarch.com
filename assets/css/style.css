@@ -1312,6 +1312,11 @@ label {
 .google-bg{
 	background: #DD4B39;
 }
+
+.linkedin-bg {
+  background-color: #0a66c2;
+}
+
 .footer-widget-heading h3 {
 	color: #fff;
 	font-size: 20px;
